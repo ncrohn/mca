@@ -7,7 +7,7 @@ module.exports = function(logger, props) {
         name: pkg.name,
         version: pkg.version,
         started: Date(),
-        mode: process.env.NODE_ENV,
+        mode: process.env.NODE_ENV || 'development',
         platform: (process.platform + " " + process.arch),
         node: process.version,
         process: process.pid,
@@ -26,7 +26,9 @@ module.exports = function(logger, props) {
 
     label = label + key + " :";
 
-    logger.info(label.blue, value.toString().grey);
+    if(value) {
+      logger.info(label.blue, value.toString().grey);
+    }
   }
 
   for(var k in defaults) {

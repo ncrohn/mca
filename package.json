@@ -2,7 +2,7 @@
   "author": "Nick Crohn <ncrohn@me.com>",
   "name": "mca",
   "description": "Simple utility to dump server information to console after server starts up.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "mca",
   "repository": {
     "type": "git",
